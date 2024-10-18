@@ -1,0 +1,15 @@
+<p>Element works!</p>
+<!-- implement a functionality where we click on button the array should change its functionality according to that -->
+<input type="text" (input)="textChange($event)" placeholder="Enter a Value" />
+<button (click)="handleAction('add')">Push</button>
+<button (click)="handleAction('remove')">Pop</button>
+<button (click)="handleAction('empty')">Empty</button>
+<button (click)="handleAction('full')">Full</button>
+
+<div>
+  <div *ngIf="list.length && !display">List is not empty</div>
+  <div *ngIf="display && list.length !== 0">List is Full</div>
+  <ul>
+    <li *ngFor="let item of list">{{ item }}</li>
+  </ul>
+</div>
